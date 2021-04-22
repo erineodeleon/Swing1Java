@@ -30,6 +30,7 @@ public class MIpRIMERFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         btnOK = new javax.swing.JButton();
+        texfi = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,16 +48,20 @@ public class MIpRIMERFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(150, 150, 150)
-                .addComponent(btnOK)
-                .addContainerGap(191, Short.MAX_VALUE))
+                .addGap(168, 168, 168)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(texfi, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnOK))
+                .addContainerGap(173, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(127, 127, 127)
+                .addGap(90, 90, 90)
+                .addComponent(texfi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43)
                 .addComponent(btnOK)
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         pack();
@@ -64,8 +69,8 @@ public class MIpRIMERFrame extends javax.swing.JFrame {
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
         // TODO add your handling code here:
-        String nombre = JOptionPane.showInputDialog(this, "Ingrese nobre")
-        JOptionPane.showMessageDialog(this,"sea actualizado." );
+         String nombre = texfi.getText();
+         JOptionPane.showMessageDialog(this,"sea actualizado." );
     }//GEN-LAST:event_btnOKActionPerformed
 
     /**
@@ -105,5 +110,6 @@ public class MIpRIMERFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnOK;
+    private javax.swing.JTextField texfi;
     // End of variables declaration//GEN-END:variables
 }
